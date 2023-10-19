@@ -1,0 +1,13 @@
+<a
+  href="#"
+  class="item flex flex-col gap-y-2 items-center justify-center"
+  (click)="onClick()"
+  [ngClass]="{ active: isActive }"
+  (mouseenter)="onMouseEnter()"
+  (mouseleave)="onMouseLeave()"
+>
+  <div class="img-container w-6">
+    <img #img [src]="buttonData.href" alt="" class="w-100" />
+  </div>
+  <h3 class="text-xs">{{ buttonData.description }}</h3>
+</a>

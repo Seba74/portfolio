@@ -1,0 +1,16 @@
+<aside
+  class="sticky left-0 w-32 h-screen background flex flex-col justify-between"
+>
+  <nav class="w-100 flex flex-col mt-6 gap-y-8">
+    <ng-container *ngFor="let buttonData of buttonsData">
+      <app-button-nav #button [buttonData]="buttonData" (activeEvent)="activeButton($event)" />
+    </ng-container>
+  </nav>
+
+  <section class="flex flex-col gap-y-6 items-center justify-center">
+    <ng-container *ngFor="let socialMedia of socialMedias">
+      <app-social-media-nav [socialMedia]="socialMedia"/>
+    </ng-container>
+    <div class="separate w-px h-14"></div>
+  </section>
+</aside>
