@@ -1,7 +1,7 @@
 <aside
-  class="sticky left-0 w-32 h-screen background flex flex-col justify-between"
+  class="w-32 h-screen background flex flex-col justify-between"
 >
-  <nav class="w-100 flex flex-col mt-6 gap-y-8">
+  <nav class="flex flex-col mt-6 gap-y-8">
     <ng-container *ngFor="let buttonData of buttonsData">
       <app-button-nav #button [buttonData]="buttonData" (activeEvent)="activeButton($event)" />
     </ng-container>

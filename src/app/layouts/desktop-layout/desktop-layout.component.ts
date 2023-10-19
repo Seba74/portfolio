@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { SidenavComponent } from 'src/app/components/sidenav/sidenav.component';
 
 @Component({
@@ -7,7 +6,7 @@ import { SidenavComponent } from 'src/app/components/sidenav/sidenav.component';
   standalone: true,
   templateUrl: './desktop-layout.component.html',
   styleUrls: ['./desktop-layout.component.scss'],
-  imports: [ RouterOutlet,  SidenavComponent]
+  imports: [ SidenavComponent]
 })
 export class DesktopLayoutComponent {
 

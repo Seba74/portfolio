@@ -1,6 +1,8 @@
 <main class="layout-container">
-  <div class="content">
-    <app-sidenav></app-sidenav>
-    <router-outlet></router-outlet>
+  <div class="content w-full flex">
+    <app-sidenav class="fixed left-0"></app-sidenav>
+    <div class="pages-content ml-32 w-full">
+      <ng-content></ng-content>
+    </div>
   </div>
 </main>

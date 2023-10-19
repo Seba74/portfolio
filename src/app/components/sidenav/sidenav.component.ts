@@ -32,6 +32,7 @@ export class SidenavComponent {
       href: '../../assets/icons/logo.svg',
       hover: '../../assets/icons/logo.svg',
       active: '../../assets/icons/logo.svg',
+      isActive: true,
     },
     {
       description: 'About',

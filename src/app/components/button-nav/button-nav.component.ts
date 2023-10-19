@@ -3,8 +3,10 @@ import {
   ElementRef,
   EventEmitter,
   Input,
+  OnInit,
   Output,
   ViewChild,
+  effect,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -13,6 +15,7 @@ interface ButtonData {
   href: string;
   hover: string;
   active: string;
+  isActive?: boolean;
 }
 
 @Component({
@@ -22,12 +25,18 @@ interface ButtonData {
   styleUrls: ['./button-nav.component.scss'],
   imports: [CommonModule],
 })
-export class ButtonNavComponent {
-  @ViewChild('img', { static: false }) img!: ElementRef;
+export class ButtonNavComponent implements OnInit {
+  @ViewChild('img', { static: true }) img!: ElementRef;
   @Input() buttonData!: ButtonData;
   @Output() activeEvent: EventEmitter<this> = new EventEmitter<this>();
-
   isActive: boolean = false;
+
+  ngOnInit(): void {
+    if (this.buttonData.isActive) {
+      this.isActive = true;
+      this.img.nativeElement.src = this.buttonData.active;
+    }
+  }
 
   onClick() {
     this.isActive = !this.isActive;
