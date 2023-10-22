@@ -1,3 +1,19 @@
-<app-desktop-layout>
-    <app-home-page></app-home-page>
-</app-desktop-layout>
+<ng-container *ngIf="mobile; else desktopLayout">
+  <app-mobile-layout>
+    <app-home-page id="seb"></app-home-page>
+    <main class="content-mobile">
+      <app-about-page id="about"></app-about-page>
+      <app-works-page id="works"></app-works-page>
+    </main>
+  </app-mobile-layout>
+</ng-container>
+
+<ng-template #desktopLayout>
+  <app-desktop-layout>
+    <app-home-page id="seb"></app-home-page>
+    <main class="content-desk">
+      <app-about-page id="about"></app-about-page>
+      <app-works-page id="works"></app-works-page>
+    </main>
+  </app-desktop-layout>
+</ng-template>

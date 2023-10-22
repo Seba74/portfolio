@@ -1,0 +1,39 @@
+<div class="card-container flex flex-col w-72 h-80 rounded-lg overflow-hidden">
+  <div class="img-content w-full h-44 overflow-hidden">
+    <img [src]="cardData.img" alt="cardData.alt" class="w-max h-max" />
+  </div>
+  <div
+    class="body-content h-36 w-full overflow-hidden flex flex-col justify-end gap-y-2 px-2 relative"
+  >
+    <div class="text flex flex-col gap-y-2 absolute top-2">
+      <h1 class="title text-base- font-semibold on-secondary-container-text">
+        {{ cardData.title }}
+      </h1>
+      <p class="description text-xs font-normal tracking-wide on-surface-text">
+        {{ cardData.description }}
+      </p>
+    </div>
+
+    <div class="icons-content flex justify-between pb-2">
+      <div class="techs flex items-center gap-x-2">
+        <div *ngFor="let tech of cardData.techs" class="tech-item w-max">
+          <img [src]="ASSET_LINK + tech + '.svg'" class="w-full h-full" />
+        </div>
+      </div>
+      <div class="links flex items-center justify-center" (mouseenter)="isHover()" (mouseleave)="isOut()">
+        <button
+          [disabled]="!cardData.isActive"
+          class="link-item w-max"
+          (click)="handleButtonClick()"
+          [ngClass]="{'cursor-pointer': cardData.isActive}"
+        >
+          <img
+            #img
+            src="../../../assets/techs/share-inactive.svg"
+            class="w-full h-full"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -3,4 +3,9 @@
 $white: #fff;
 $black: #000;
 
-$background : var(--md-sys-color-background);
+$background: var(--md-sys-color-background);
+
+
+.white {
+    color: $white;
+}

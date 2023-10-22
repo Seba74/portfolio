@@ -9,5 +9,32 @@
     background-color: rgba(124, 41, 64, 0.1);
     z-index: -1;
     border-radius: 50%;
-    
+}
+@media screen and (max-width: 900px) {
+    .home-page {
+        padding-top: 12rem;
+    }
+    .bg {
+        width: 300px;
+        height: 70px;
+        top: 65%;
+    }
+    .title-container {
+        row-gap: 40px;
+        h1 {
+            text-align: center;
+            font-size: 3.6rem;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .bg {
+        top: 70%;
+    }
 }

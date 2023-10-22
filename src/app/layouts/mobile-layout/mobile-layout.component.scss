@@ -1,0 +1,21 @@
+mat-sidenav {
+    background-color: var(--md-sys-color-surface);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    overflow: hidden;
+    padding-top: 14px;
+}
+
+header{
+    width: 100%;
+    // header background has to be a little bit transparent but has to be a shadow on the bottom of the header
+    background-color: var(--md-sys-color-surface);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+mat-nav-list{
+    display: flex;
+    row-gap: 14px;
+    padding-left: 24px;
+    background-color: var(--md-sys-color-surface);
+}

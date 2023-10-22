@@ -8,11 +8,12 @@ import {
   ViewChild,
   effect,
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 
 interface ButtonData {
   description: string;
   href: string;
+  normal: string;
   hover: string;
   active: string;
   isActive?: boolean;
@@ -23,7 +24,7 @@ interface ButtonData {
   standalone: true,
   templateUrl: './button-nav.component.html',
   styleUrls: ['./button-nav.component.scss'],
-  imports: [CommonModule],
+  imports: [NgClass],
 })
 export class ButtonNavComponent implements OnInit {
   @ViewChild('img', { static: true }) img!: ElementRef;
@@ -37,18 +38,7 @@ export class ButtonNavComponent implements OnInit {
       this.img.nativeElement.src = this.buttonData.active;
     }
   }
-
-  onClick() {
-    this.isActive = !this.isActive;
-    this.activeEvent.emit(this);
-
-    if (this.isActive) {
-      this.img.nativeElement.src = this.buttonData.active;
-    } else {
-      this.img.nativeElement.src = this.buttonData.href;
-    }
-  }
-
+  
   onMouseEnter() {
     if (!this.isActive) {
       this.img.nativeElement.src = this.buttonData.hover;
@@ -57,7 +47,7 @@ export class ButtonNavComponent implements OnInit {
 
   onMouseLeave() {
     if (!this.isActive) {
-      this.img.nativeElement.src = this.buttonData.href;
+      this.img.nativeElement.src = this.buttonData.normal;
     }
   }
 }
