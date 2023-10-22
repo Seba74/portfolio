@@ -7,9 +7,14 @@
 }
 
 @media (min-width: 1600px) {
-    .cards-container 
-    {
+    .cards-container {
         padding: 0 2rem;
         gap: 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-container {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     }
 }

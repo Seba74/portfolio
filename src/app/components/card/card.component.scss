@@ -9,3 +9,19 @@
     border: 1px solid rgba(var(--md-sys-color-outline-rgb), 1);
     transition: border 0.2s ease-in-out;
 }
+
+@media (max-width: 600px) {
+    .card-container {
+        width: 320px; height: 340px;
+    }
+
+    .text{
+        .title{
+            font-size: 1.2rem;
+        }
+        .description {
+            font-size: .8rem;
+            padding-right: 4px;
+        }
+    }
+}

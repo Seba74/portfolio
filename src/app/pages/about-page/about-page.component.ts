@@ -9,5 +9,6 @@ import { MdButtonComponent } from 'src/app/components/md-button/md-button.compon
   imports: [MdButtonComponent]
 })
 export class AboutPageComponent {
-
+  href: string = '../../../assets/cv/seb-guevara.pdf'
+  download: string = 'Sebastian_Guevara_CV.pdf'
 }

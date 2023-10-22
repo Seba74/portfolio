@@ -11,9 +11,6 @@
     border-radius: 50%;
 }
 @media screen and (max-width: 900px) {
-    .home-page {
-        padding-top: 12rem;
-    }
     .bg {
         width: 300px;
         height: 70px;
@@ -35,6 +32,6 @@
 
 @media screen and (max-width: 610px) {
     .bg {
-        top: 70%;
+        top: 60%;
     }
 }

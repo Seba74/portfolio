@@ -7,7 +7,7 @@
     <mat-sidenav
       fixedInViewport
       #nav
-      class="w-80 flex flex-col justify-between"
+      class="w-5/6 flex flex-col justify-between"
       mode="over"
     >
       <mat-nav-list class="w-full h-full flex flex-col justify-between">
@@ -33,11 +33,11 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <header class="flex h-12 pl-4 gap-x-3 items-center fixed z-10 white">
-        <button (click)="nav.toggle()">
-          <img src="../../../assets/icons/menu.svg" alt="Menu" />
+      <header class="flex h-20 pl-4 gap-x-4 items-center fixed z-10 white">
+        <button (click)="nav.toggle()" class="w-8">
+          <img class="w-full h-full" src="../../../assets/icons/menu.svg" alt="Menu" />
         </button>
-        <div class="title flex items-center justify-center w-6 pt-1">
+        <div class="title flex items-center justify-center w-8 pt-1">
           <img
             class="w-full h-full"
             src="../../../assets/icons/logo.svg"
